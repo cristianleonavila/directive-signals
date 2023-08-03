@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./products/products.module').then( m => m.ProductsModule )
   },
   {
+    path: 'signals',
+    loadChildren: () => import('./signals/signal.module').then( m => m.SignalModule)
+  },
+  {
     path: '**', redirectTo: 'products'
   }
 ];
